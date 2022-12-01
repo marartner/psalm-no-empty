@@ -4,18 +4,18 @@ namespace Marartner\PsalmNoEmpty\Hooks;
 
 use Marartner\PsalmNoEmpty\Issue\UsedEmptyConstruct;
 use PhpParser\Node\Expr;
-use Psalm\Codebase;
 use Psalm\CodeLocation;
-use Psalm\Context;
 use Psalm\IssueBuffer;
-use Psalm\Plugin\Hook\AfterExpressionAnalysisInterface;
-use Psalm\StatementsSource;
+use Psalm\Plugin\EventHandler\AfterExpressionAnalysisInterface;
+use Psalm\Plugin\EventHandler\Event\AfterExpressionAnalysisEvent;
 
 final class UsedEmptyHook implements AfterExpressionAnalysisInterface
 {
-    public static function afterExpressionAnalysis(Expr $expr, Context $context, StatementsSource $statements_source, Codebase $codebase, array &$file_replacements = []): ?bool
+    public static function afterExpressionAnalysis(AfterExpressionAnalysisEvent $event): ?bool
     {
+        $expr = $event->getExpr();
         if ($expr instanceof Expr\Empty_) {
+            $statements_source = $event->getStatementsSource();
             IssueBuffer::accepts(
                 new UsedEmptyConstruct(
                     'Do not use the empty() construct',
