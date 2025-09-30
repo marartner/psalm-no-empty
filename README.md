@@ -1,5 +1,8 @@
 # No Empty
-[![Latest Stable Version](https://poser.pugx.org/marartner/psalm-no-empty/v)](//packagist.org/packages/marartner/psalm-no-empty) [![Total Downloads](https://poser.pugx.org/marartner/psalm-no-empty/downloads)](//packagist.org/packages/marartner/psalm-no-empty) [![Latest Unstable Version](https://poser.pugx.org/marartner/psalm-no-empty/v/unstable)](//packagist.org/packages/marartner/psalm-no-empty) [![License](https://poser.pugx.org/marartner/psalm-no-empty/license)](//packagist.org/packages/marartner/psalm-no-empty)
+[![Packagist Version](https://img.shields.io/packagist/v/marartner/psalm-no-empty?style=for-the-badge&label=stable)](//packagist.org/packages/marartner/psalm-no-empty)
+[![Total Downloads](https://img.shields.io/packagist/dt/marartner/psalm-no-empty?style=for-the-badge)](//packagist.org/packages/marartner/psalm-no-empty)
+[![Downloads per month](https://img.shields.io/packagist/dm/marartner/psalm-no-empty?style=for-the-badge)](//packagist.org/packages/marartner/psalm-no-empty)
+[![License](https://img.shields.io/packagist/l/marartner/psalm-no-empty?style=for-the-badge)](//packagist.org/packages/marartner/psalm-no-empty)
 
 Psalm plugin to detect usage of empty().
 
